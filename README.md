@@ -30,13 +30,13 @@ DSMModule (Distributional Similarity Measures Module) aims at offering the user 
 	* The SimilarityMeasuresManager class wraps all the distributional similarity measures offered by the DSMModule. Within the SimilarityMeasuresManager class you will find a demo that demonstrates how you can use them. Please have a closer look at the main method located at *'src/measures/SimilarityMeasuresManager'*
 		* SimilarityMeasuresManager myMeasures = new SimilarityMeasuresManager(Constants.EN); // receives *the language*
 		* myMeasures.getSimilarityValuesForLemmas(s1, s2, true) // computes the similarity between two sentences
-		* to compute the similarity between documents or copora take a look at the class ProcessingSimilarity located at at *'src/zarticles/inteliterm/processing/ProcessingSimilarity'* 
+		* to compute the similarity between documents or corpora take a look at the class ProcessingSimilarity located within the package *'src/zarticles/inteliterm/processing/'* 
 
 * Apart from that this program also includes several abstraction methods to perform various NLP tasks, such as: POS Tagging (TreeTagger); Lemmatisation (TreeTagger); Stemming (Snowball); Tokenisation (OpenNLP); Sentence Delimitation (OpenNLP); NER (OpenNLP); and Stopword Checker. Hereafter we describe how these methods can be called.
 	* NLPManager nlpManager = new NLPManager(Constants.EN); // receives *the language*
 	* The NLPManager class wraps all the NLP methods offered by the PreProcessor (http://github.com/hpcosta/PreProcessor). Within this class you will find a demo() that demonstrates how you can use all these methods for various languages. Please have a closer look at the demo() method located at *'src/nlp/NLPManager'*
 
-* For more information about the program and how it can be used in real scenarios, please read the following publications: "Measuring the Relatedness between Documents in Comparable Corpora" (http://eden.dei.uc.pt/~hpcosta/docs/papers/201511-TIA.pdf); "Assessing Comparable Corpora through Distributional Similarity Measures" (http://eden.dei.uc.pt/~hpcosta/docs/papers/201506-EXPERT_ESR03.pdf); and, Compilação de Corpos Comparáveis Especializados: Devemos sempre confiar nas Ferramentas de Compilação Semi-automáticas? (http://eden.dei.uc.pt/~hpcosta/docs/papers/201606-Linguamatica.pdf).
+* Please read the following publications for more information about the program and how it can be used in real scenarios: "Measuring the Relatedness between Documents in Comparable Corpora" (http://eden.dei.uc.pt/~hpcosta/docs/papers/201511-TIA.pdf); "Assessing Comparable Corpora through Distributional Similarity Measures" (http://eden.dei.uc.pt/~hpcosta/docs/papers/201506-EXPERT_ESR03.pdf); and, Compilação de Corpos Comparáveis Especializados: Devemos sempre confiar nas Ferramentas de Compilação Semi-automáticas? (http://eden.dei.uc.pt/~hpcosta/docs/papers/201606-Linguamatica.pdf).
 
 
 
@@ -46,7 +46,7 @@ DSMModule (Distributional Similarity Measures Module) aims at offering the user 
 
 1. Import the project to your Java editor.
 
-2. Copy the folder 'config' and 'internalResources' to the root of your project (it should be at the same level as the src folder).
+2. The folder 'config' and 'internalResources' should be at the same level as the src folder.
 	* The folder 'internalResources' contains models for the:
 		* TreeTagger (English, French, German, Italian, Portuguese and Spanish)
 		* OpenNLP (tokeniser, sentence splitter and NER - only for English)
@@ -99,6 +99,9 @@ This section is important to let you know what libraries are used in this projec
 				* Person name finder model, trained on conll02 shared task data.	
 				* Misc name finder model, trained on conll02 shared task data.
 			* the English and Spanish models are loaded by the 'NEREnModelsLoader' and 'NEREsModelsLoader' classes, respectively.
+	* CSV
+		* used to store the similarity socores
+			* opencsv-3.3.jar
 
 
 
