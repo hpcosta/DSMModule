@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="/Users/hpcosta/Docs/workspacePhD/DSMModule/libs/opennlp-uima-1.5.3.jar"/>
 	<classpathentry kind="lib" path="/Users/hpcosta/Docs/workspacePhD/DSMModule/libs/org.annolab.tt4j-1.0.15.jar"/>
 	<classpathentry kind="lib" path="/Users/hpcosta/Docs/workspacePhD/DSMModule/libs/org.tartarus.snowball.jar"/>
+	<classpathentry kind="lib" path="/Users/hpcosta/Docs/workspacePhD/DSMModule/libs/opencsv-3.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

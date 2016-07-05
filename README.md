@@ -26,10 +26,11 @@ DSMModule (Distributional Similarity Measures Module) aims at offering the user 
 2. TECHNICAL INFORMATION
 =========================
 
-* This program provides several abstraction methods to assess, compare and rank documents acording to their internal degree of similarity. In detail, the DSMModule allows you to compute the similarity between either sentences, documents or even corpora. And, the comparison can be made using tokens, lemmas or stems.
+* This program provides several abstraction methods to assess, compare and rank documents acording to their internal degree of similarity. In detail, the DSMModule allows you to compute the similarity between sentences, documents and corpora. The similarity can be computed using tokens, lemmas or stems.
 	* The SimilarityMeasuresManager class wraps all the distributional similarity measures offered by the DSMModule. Within the SimilarityMeasuresManager class you will find a demo that demonstrates how you can use them. Please have a closer look at the main method located at *'src/measures/SimilarityMeasuresManager'*
 		* SimilarityMeasuresManager myMeasures = new SimilarityMeasuresManager(Constants.EN); // receives *the language*
 		* myMeasures.getSimilarityValuesForLemmas(s1, s2, true) // computes the similarity between two sentences
+		* to compute the similarity between documents or copora take a look at the class ProcessingSimilarity located at at *'src/zarticles/inteliterm/processing/ProcessingSimilarity'* 
 
 * Apart from that this program also includes several abstraction methods to perform various NLP tasks, such as: POS Tagging (TreeTagger); Lemmatisation (TreeTagger); Stemming (Snowball); Tokenisation (OpenNLP); Sentence Delimitation (OpenNLP); NER (OpenNLP); and Stopword Checker. Hereafter we describe how these methods can be called.
 	* NLPManager nlpManager = new NLPManager(Constants.EN); // receives *the language*
@@ -101,13 +102,12 @@ This section is important to let you know what libraries are used in this projec
 
 
 
-
 4. REQUIREMENTS
 =========================
 
 - Java 6 (JRE 1.6) or higher
 
-- Several models (already included either in the 'internalResources' or in the 'externalResources' folder)
+- Several models (already included in the 'internalResources' folder)
 
 
 
